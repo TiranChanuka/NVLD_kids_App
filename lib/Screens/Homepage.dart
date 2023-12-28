@@ -114,7 +114,7 @@ class _HomeScreenState extends State<HomeScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
             label: 'Search',
-            backgroundColor: Colors.black,
+            backgroundColor: const Color.fromARGB(255, 182, 9, 9),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
