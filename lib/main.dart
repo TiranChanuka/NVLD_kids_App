@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:nvld_app/NaviationBar.dart';
 import './Screens/Homepage.dart';
 
 import 'package:device_preview/device_preview.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: NavigationBarBottom(),
     );
   }
 }
