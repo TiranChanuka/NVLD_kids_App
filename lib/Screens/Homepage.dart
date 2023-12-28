@@ -108,31 +108,31 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: whitecolor,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-            backgroundColor: Colors.black,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
-            backgroundColor: Colors.black,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.bar_chart),
-            label: 'stat',
-            backgroundColor: Colors.black,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-            backgroundColor: Colors.black,
-          ),
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   backgroundColor: whitecolor,
+      //   items: [
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.home),
+      //       label: 'Home',
+      //       backgroundColor: Colors.black,
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.gamepad),
+      //       label: 'Games',
+      //       backgroundColor: Colors.black,
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.bar_chart),
+      //       label: 'stat',
+      //       backgroundColor: Colors.black,
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.person),
+      //       label: 'Profile',
+      //       backgroundColor: Colors.black,
+      //     ),
+      //   ],
+      // ),
     );
   }
 }
