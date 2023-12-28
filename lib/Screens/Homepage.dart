@@ -112,9 +112,9 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: whitecolor,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
-            backgroundColor: const Color.fromARGB(255, 182, 9, 9),
+            icon: Icon(Icons.home),
+            label: 'Home',
+            backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
