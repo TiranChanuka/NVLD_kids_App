@@ -5,7 +5,8 @@ import './Screens/Homepage.dart';
 
 import 'package:device_preview/device_preview.dart';
 
-import 'SplashScreen/SplashScreen.dart';
+import 'SplashScreen/splashScreenOne.dart';
+
 
 void main() => runApp(
       DevicePreview(
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
-      home: OnboardScreen(),
+      home: SplashScreenOne(),
     );
   }
 }
