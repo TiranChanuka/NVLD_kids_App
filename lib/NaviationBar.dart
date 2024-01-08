@@ -4,7 +4,6 @@ import './Screens/Homepage.dart';
 import './Screens/GamePage.dart';
 import './Screens/ProfilePage.dart';
 import './Screens/StatPage.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class NavigationBarBottom extends StatefulWidget {
   const NavigationBarBottom({super.key});
@@ -38,8 +37,6 @@ class _NavigationBarBottomState extends State<NavigationBarBottom> {
           selectedItemColor: tertiaryColor,
           unselectedItemColor: primaryColor,
           selectedFontSize: 15,
-          selectedLabelStyle: TextStyle(fontWeight: FontWeight.w700),
-          showUnselectedLabels: true,
           currentIndex: currentIndex,
           onTap: (index) {
             setState(() {
@@ -52,15 +49,15 @@ class _NavigationBarBottomState extends State<NavigationBarBottom> {
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.sports_esports),
+              icon: Icon(Icons.games),
               label: 'Games',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person_sharp),
+              icon: Icon(Icons.person),
               label: 'Profile',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.analytics),
+              icon: Icon(Icons.bar_chart),
               label: 'Stats',
             ),
           ],
