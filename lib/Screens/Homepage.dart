@@ -38,9 +38,8 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Row(
           children: [
             CircleAvatar(
-              radius: 20, // Adjust the radius as needed
-              backgroundImage: AssetImage(
-                  'assets/profile_pic.png'), // Replace with your image path
+              radius: 20,
+              backgroundImage: AssetImage('assets/profile_pic.png'),
             ),
             const SizedBox(width: 10), // Add spacing between elements
             Column(
