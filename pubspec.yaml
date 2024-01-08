@@ -71,6 +71,8 @@ flutter:
     - assets/images/smile.jpg
     - assets/images/happy.jpg
     - assets/animations/kidsworking.json
+    - assets/animations/ball.json
+    - assets/animations/play.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
