@@ -3,7 +3,6 @@ import 'package:lottie/lottie.dart';
 import 'package:nvld_app/color.dart';
 import '../NaviationBar.dart';
 
-
 class SplashScreenOne extends StatelessWidget {
   const SplashScreenOne({super.key});
 
@@ -12,6 +11,10 @@ class SplashScreenOne extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
+          Container(
+            height: 100,
+            color: primaryColor,
+          ),
           Padding(
             padding:
                 const EdgeInsets.all(20.0), // Adjust padding values as needed
@@ -27,7 +30,7 @@ class SplashScreenOne extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.only(left: 20.0),
             child: Text(
               'Welcome to Kids',
               textAlign: TextAlign.start,
@@ -38,8 +41,9 @@ class SplashScreenOne extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(height: 10),
           Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.only(left: 20.0, right: 20.0),
             child: Text(
               'Kids is a game that helps children with NVLD to improve their social skills.',
               textAlign: TextAlign.start,
@@ -56,7 +60,8 @@ class SplashScreenOne extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => NavigationBarBottom()),
+                  MaterialPageRoute(
+                      builder: (context) => NavigationBarBottom()),
                 );
               },
               child: Text(
