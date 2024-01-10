@@ -73,6 +73,11 @@ flutter:
     - assets/animations/kidsworking.json
     - assets/animations/ball.json
     - assets/animations/play.json
+    - assets/animations/ani1.json
+    - assets/animations/ani2.json
+    - assets/animations/ani3.json
+    - assets/animations/ani4.json
+    - assets/animations/ani5.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
