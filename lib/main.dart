@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:nvld_app/FeelingExplore/FeelingExplorerHome.dart';
 import 'package:nvld_app/NaviationBar.dart';
 import './Screens/Homepage.dart';
 
@@ -25,6 +26,10 @@ class MyApp extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       home: SplashScreenOne(),
+      routes: {
+        '/feeling_explore': (context) => FeelingExplorer(),
+        // ... other routes
+      },
     );
   }
 }
