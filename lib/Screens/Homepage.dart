@@ -24,12 +24,12 @@ class _HomeScreenState extends State<HomeScreen> {
     CardModel(
       title: 'Magic Pattern',
       imagePath: 'assets/images/magic.jpg',
-      route: '/feeling_explore',
+      route: '/magic_pattern',
     ),
     CardModel(
         title: 'Puzzle Planet',
         imagePath: 'assets/images/buildingblock.jpg',
-        route: '/feeling_explore'),
+        route: '/puzzel_planet'),
     CardModel(
         title: 'Feelings Explorer',
         imagePath: 'assets/images/smile.jpg',
@@ -37,15 +37,15 @@ class _HomeScreenState extends State<HomeScreen> {
     CardModel(
         title: 'Doodle Dash',
         imagePath: 'assets/images/happy.jpg',
-        route: '/feeling_explore'),
+        route: '/doodle_dash'),
     CardModel(
         title: 'Bubble Pop Bliss',
         imagePath: 'assets/images/bubble.jpg',
-        route: '/feeling_explore'),
+        route: '/bubble_pop_bliss'),
     CardModel(
         title: 'My Day, My Way',
         imagePath: 'assets/images/dailyrout.jpg',
-        route: '/feeling_explore'),
+        route: '/myday_myway'),
   ];
   @override
   Widget build(BuildContext context) {
