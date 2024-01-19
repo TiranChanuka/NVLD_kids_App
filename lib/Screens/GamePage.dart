@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:nvld_app/color.dart';
 
+import '../FeelingExplore/SmileCapture.dart';
+
 class Games extends StatelessWidget {
   const Games({super.key});
 
@@ -12,13 +14,29 @@ class Games extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: whitecolor,
-        title: Text(
-          'Games',
-          style: TextStyle(
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
-            color: primaryColor,
-          ),
+        title: Row(
+          children: [
+            CircleAvatar(
+              radius: 20,
+              backgroundImage: AssetImage('assets/profile_pic.png'),
+            ),
+            SizedBox(width: 10),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                Text(
+                  'Welcome',
+                  style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text('User Name',
+                    style:
+                    TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
+              ],
+            ),
+          ],
         ),
       ),
       body: ListView(
@@ -40,7 +58,7 @@ class Games extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.only(left: 10, right: 10),
             child: Text(
@@ -53,6 +71,50 @@ class Games extends StatelessWidget {
             ),
           ),
           SizedBox(height: 10),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SmileCapture(), // Replace with your desired screen
+                ),
+              );
+            },
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Image.asset('assets/images/buildingblock.png'),
+            ),
+          ),
+          SizedBox(height: 20,),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SmileCapture(), // Replace with your desired screen
+                ),
+              );
+            },
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Image.asset('assets/images/drag.png'),
+            ),
+          ),
+          SizedBox(height: 20,),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SmileCapture(), // Replace with your desired screen
+                ),
+              );
+            },
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Image.asset('assets/images/solvepuzzle.png'),
+            ),
+          ),
         ],
       ),
     );
