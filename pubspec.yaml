@@ -72,9 +72,13 @@ flutter:
     - assets/images/smile.jpg
     - assets/images/happy.jpg
     - assets/images/sad.png
+    - assets/images/drag.png
+    - assets/images/solvepuzzle.png
+    - assets/images/buildingblock.png
     - assets/images/smile.png
     - assets/images/angry.png
     - assets/animations/kidsworking.json
+    - assets/animations/kidsworking2.json
     - assets/animations/ball.json
     - assets/animations/play.json
     - assets/animations/ani1.json
