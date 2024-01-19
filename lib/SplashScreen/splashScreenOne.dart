@@ -11,28 +11,29 @@ class SplashScreenOne extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
-          Container(
-            height: 100,
-            color: primaryColor,
-          ),
-          Padding(
-            padding:
-                const EdgeInsets.all(20.0), // Adjust padding values as needed
-            child: Material(
-              // elevation: 2,
-              // borderRadius: BorderRadius.circular(200),
-              // child: Container(
-              //   decoration: BoxDecoration(
-              //     gradient: primaryGradient,
-              //     borderRadius: BorderRadius.circular(200),
-              //   ),
-              child: Lottie.asset('assets/animations/kidsworking.json'),
+          ClipPath(
+            clipper: MyClipper(),
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              height: MediaQuery.of(context).size.height / 2,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [
+                    Color(0xFF3383CD),
+                    Color(0xFF11249F),
+                  ],
+                ),
+              ),
+              child: Lottie.asset('assets/animations/kidsworking2.json'),
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 20.0),
             child: Text(
-              'Welcome to Kids',
+              'Welcome Kids',
               textAlign: TextAlign.start,
               style: TextStyle(
                 fontSize: 24,
@@ -54,6 +55,7 @@ class SplashScreenOne extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(height: 80,),
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: ElevatedButton(
@@ -84,5 +86,22 @@ class SplashScreenOne extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+class MyClipper extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    var path = Path();
+    path.lineTo(0, size.height - 80);
+    path.quadraticBezierTo(
+        size.width / 2, size.height, size.width, size.height - 80);
+    path.lineTo(size.width, 0);
+    path.close();
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) {
+    return false;
   }
 }
