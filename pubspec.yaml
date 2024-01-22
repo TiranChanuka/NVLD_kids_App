@@ -36,6 +36,7 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   get: ^4.6.6
   font_awesome_flutter: ^10.6.0
+  flutter_svg: ^2.0.9
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -70,9 +71,24 @@ flutter:
     - assets/images/dailyrout.jpg
     - assets/images/smile.jpg
     - assets/images/happy.jpg
+    - assets/images/sad.png
+    - assets/images/drag.png
+    - assets/images/solvepuzzle.png
+    - assets/images/buildingblock.png
+    - assets/images/smile.png
+    - assets/images/angry.png
     - assets/animations/kidsworking.json
+    - assets/animations/kidsworking2.json
     - assets/animations/ball.json
     - assets/animations/play.json
+    - assets/animations/ani1.json
+    - assets/animations/ani2.json
+    - assets/animations/ani3.json
+    - assets/animations/ani4.json
+    - assets/animations/ani5.json
+    - assets/svg/smile.svg
+    - assets/svg/sad.svg
+    - assets/svg/angry.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

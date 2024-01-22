@@ -49,7 +49,7 @@ class _NavigationBarBottomState extends State<NavigationBarBottom> {
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.games),
+              icon: Icon(Icons.videogame_asset),
               label: 'Games',
             ),
             BottomNavigationBarItem(
