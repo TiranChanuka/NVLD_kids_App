@@ -100,6 +100,10 @@ flutter:
     - assets/sun.jpg
     - assets/tree.jpg
     - assets/home.jpg
+    - assets/happy_face.jpg
+    - assets/sad_face.jpg
+    - assets/angry_face.jpg
+    - assets/surprised_face.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
