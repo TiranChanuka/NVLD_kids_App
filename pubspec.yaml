@@ -105,6 +105,10 @@ flutter:
     - assets/angry_face.jpg
     - assets/surprised_face.jpg
 
+    - assets/facial_expression_image.jpg
+    - assets/drawing_lettering_image.jpg
+    - assets/puzzle_solving_image.jpg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
