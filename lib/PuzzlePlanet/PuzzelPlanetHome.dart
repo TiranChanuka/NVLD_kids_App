@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 import 'package:nvld_app/Game/PuzzleGame.dart';
+import 'package:nvld_app/Game/TicTac.dart';
 
 import '../color.dart';
 
@@ -16,7 +18,7 @@ class PuzzelPlanetHome extends StatelessWidget {
           color: primaryColor,
         ),
         title: Text(
-          'Solve Puzzel',
+          'Play',
           style: GoogleFonts.sourceSans3(
             fontSize: 24,
             fontWeight: FontWeight.w700,
@@ -26,26 +28,51 @@ class PuzzelPlanetHome extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          ElevatedButton(
-            child: Text('Click Me'),
-            onPressed: () {
+
+          GestureDetector(
+            onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => PuzzleGame()),
+                  builder: (context) => PuzzleGame(),
+                ),
               );
-              print('Button pressed!');
             },
-            style: ElevatedButton.styleFrom(
-              primary: Colors.blue, // Background color
-              onPrimary: Colors.white, // Text color
-              elevation: 5, // Shadow elevation
-              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15), // Corner rounding
-              ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Image.asset('assets/images/solvepuzzle.png'),
             ),
-          )
+          ),
+          SizedBox(height: 20,),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => TicTacGame(),
+                ),
+              );
+            },
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Image.asset('assets/images/tictac.png'),
+            ),
+          ),
+          SizedBox(height: 20,),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PuzzleGame(),
+                ),
+              );
+            },
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Image.asset('assets/images/solvepuzzle.png'),
+            ),
+          ),
         ],
       ),
     );
