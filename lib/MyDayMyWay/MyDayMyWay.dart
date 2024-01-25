@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 
 import '../color.dart';
 class MyDayMyWay extends StatelessWidget {
@@ -20,6 +21,15 @@ class MyDayMyWay extends StatelessWidget {
             color: primaryColor,
           ),
         ),
+      ),
+      body: ListView(
+        children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 20, right: 20),
+          child: Lottie.asset('assets/animations/ani1.json',
+              width: 300, height: 300),
+        ),
+        ],
       ),
     );
   }
