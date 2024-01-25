@@ -27,11 +27,11 @@ class FeelingExplorer extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20),
-            child: Lottie.asset('assets/animations/ani2.json',
-                width: 300, height: 300),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.only(left: 20, right: 20),
+          //   child: Lottie.asset('assets/animations/ani2.json',
+          //       width: 300, height: 300),
+          // ),
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 20),
             child: Text(
