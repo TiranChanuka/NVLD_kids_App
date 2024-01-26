@@ -29,6 +29,7 @@ class MyDayMyWay extends StatelessWidget {
           child: Lottie.asset('assets/animations/ani1.json',
               width: 300, height: 300),
         ),
+
         ],
       ),
     );
