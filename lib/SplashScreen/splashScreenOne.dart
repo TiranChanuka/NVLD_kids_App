@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:nvld_app/SignIn/SignInPage.dart';
 import 'package:nvld_app/color.dart';
 import '../NaviationBar.dart';
 
@@ -63,7 +64,7 @@ class SplashScreenOne extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => NavigationBarBottom()),
+                      builder: (context) => SignIn()),
                 );
               },
               child: Text(
