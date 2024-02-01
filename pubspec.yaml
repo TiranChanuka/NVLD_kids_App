@@ -88,6 +88,8 @@ flutter:
     - assets/animations/ani3.json
     - assets/animations/ani4.json
     - assets/animations/ani5.json
+    - assets/animations/signup.json
+    - assets/animations/sign.json
     - assets/animations/block.json
     - assets/animations/puzzle.json
     - assets/svg/smile.svg
