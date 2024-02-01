@@ -10,7 +10,7 @@ import '../color.dart';
    Widget build(BuildContext context) {
      return Scaffold(
        appBar: AppBar(
-         iconTheme: IconThemeData(
+         iconTheme: const IconThemeData(
            color: primaryColor,
          ),
          // title: Text(
@@ -46,9 +46,9 @@ import '../color.dart';
                ),
              ),
            ),
-           SizedBox(height: 20,),
-           Padding(
-             padding: const EdgeInsets.only(left: 10, right: 10),
+           const SizedBox(height: 20,),
+           const Padding(
+             padding: EdgeInsets.only(left: 10, right: 10),
              child: Text(
                'Select Catagory',
                textAlign: TextAlign.center,
