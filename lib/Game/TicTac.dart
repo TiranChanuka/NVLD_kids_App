@@ -1,9 +1,10 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:nvld_app/color.dart';
 
 class TicTacGame extends StatefulWidget {
+  const TicTacGame({super.key});
+
   @override
   State<TicTacGame> createState() => _GamePageState();
 }
@@ -32,7 +33,7 @@ class _GamePageState extends State<TicTacGame> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Tic Tac'
         ),
       ),
