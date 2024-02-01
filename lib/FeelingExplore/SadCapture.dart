@@ -10,7 +10,7 @@ class SadCapture extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: primaryColor,
         ),
         title: Text(
