@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:nvld_app/SignIn/SignInPage.dart';
 import 'package:nvld_app/color.dart';
-import '../NaviationBar.dart';
 
 class SplashScreenOne extends StatelessWidget {
   const SplashScreenOne({super.key});
@@ -15,10 +14,10 @@ class SplashScreenOne extends StatelessWidget {
           ClipPath(
             clipper: MyClipper(),
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               height: MediaQuery.of(context).size.height / 2,
               width: double.infinity,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft,
@@ -31,8 +30,8 @@ class SplashScreenOne extends StatelessWidget {
               child: Lottie.asset('assets/animations/kidsworking2.json'),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 20.0),
+          const Padding(
+            padding: EdgeInsets.only(left: 20.0),
             child: Text(
               'Welcome Kids',
               textAlign: TextAlign.start,
@@ -43,9 +42,9 @@ class SplashScreenOne extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 10),
-          Padding(
-            padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+          const SizedBox(height: 10),
+          const Padding(
+            padding: EdgeInsets.only(left: 20.0, right: 20.0),
             child: Text(
               'Kids is a game that helps children with NVLD to improve their social skills.',
               textAlign: TextAlign.start,
@@ -56,7 +55,7 @@ class SplashScreenOne extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 80,),
+          const SizedBox(height: 80,),
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: ElevatedButton(
@@ -64,22 +63,22 @@ class SplashScreenOne extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => SignIn()),
+                      builder: (context) => const SignIn()),
                 );
               },
-              child: Text(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: primaryColor,
+                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+              child: const Text(
                 'Get Started',
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w400,
                   color: Colors.white,
-                ),
-              ),
-              style: ElevatedButton.styleFrom(
-                primary: primaryColor,
-                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
                 ),
               ),
             ),
