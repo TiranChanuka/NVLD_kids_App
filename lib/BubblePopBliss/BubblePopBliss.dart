@@ -10,7 +10,7 @@ class BubblePopBliss extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: primaryColor,
         ),
         title: Text(
@@ -28,7 +28,7 @@ class BubblePopBliss extends StatelessWidget {
             padding: const EdgeInsets.only(left: 10,right: 10,),
             child: Image.asset('assets/images/mindrelax.png'),
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           Padding(padding: const EdgeInsets.only(left: 20,right: 20),
             child: Card(
               color: cardColor,
@@ -67,7 +67,7 @@ class BubblePopBliss extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           Padding(padding: const EdgeInsets.only(left: 20,right: 20),
             child: Card(
               child: Row(
@@ -87,10 +87,10 @@ class BubblePopBliss extends StatelessWidget {
                         )
                     ),
                   ),
-                  Expanded(
+                  const Expanded(
                     flex: 2, // Adjust ratio as needed
                     child: Padding(
-                      padding: const EdgeInsets.all(20.0),
+                      padding: EdgeInsets.all(20.0),
                       child: Text(
                         'Card Title',
                         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -101,7 +101,7 @@ class BubblePopBliss extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           Padding(padding: const EdgeInsets.only(left: 20,right: 20),
             child: Card(
               child: Row(
@@ -121,10 +121,10 @@ class BubblePopBliss extends StatelessWidget {
                         )
                     ),
                   ),
-                  Expanded(
+                  const Expanded(
                     flex: 2, // Adjust ratio as needed
                     child: Padding(
-                      padding: const EdgeInsets.all(20.0),
+                      padding: EdgeInsets.all(20.0),
                       child: Text(
                         'Card Title',
                         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -135,7 +135,7 @@ class BubblePopBliss extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           Padding(padding: const EdgeInsets.only(left: 20,right: 20),
             child: Card(
               child: Row(
@@ -155,10 +155,10 @@ class BubblePopBliss extends StatelessWidget {
                       )
                     ),
                   ),
-                  Expanded(
+                  const Expanded(
                     flex: 2, // Adjust ratio as needed
                     child: Padding(
-                      padding: const EdgeInsets.all(20.0),
+                      padding: EdgeInsets.all(20.0),
                       child: Text(
                         'Card Title',
                         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -169,7 +169,7 @@ class BubblePopBliss extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
         ],
       ),
     );

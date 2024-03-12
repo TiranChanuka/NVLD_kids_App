@@ -12,7 +12,7 @@ class CardModel {
 }
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -20,28 +20,28 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final List<CardModel> cards = [
-    CardModel(
+    const CardModel(
       title: 'Magic Pattern',
       imagePath: 'assets/images/magic.jpg',
       route: '/magic_pattern',
     ),
-    CardModel(
+    const CardModel(
         title: 'Puzzle Planet',
         imagePath: 'assets/images/buildingblock.jpg',
         route: '/puzzel_planet'),
-    CardModel(
+    const CardModel(
         title: 'Feelings Explorer',
         imagePath: 'assets/images/smile.jpg',
         route: '/feeling_explore'),
-    CardModel(
+    const CardModel(
         title: 'Doodle Dash',
         imagePath: 'assets/images/happy.jpg',
         route: '/doodle_dash'),
-    CardModel(
+    const CardModel(
         title: 'Bubble Pop Bliss',
         imagePath: 'assets/images/bubble.jpg',
         route: '/bubble_pop_bliss'),
-    CardModel(
+    const CardModel(
         title: 'My Day, My Way',
         imagePath: 'assets/images/dailyrout.jpg',
         route: '/myday_myway'),
@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: whitecolor,
-        title: Row(
+        title: const Row(
           children: [
             CircleAvatar(
               radius: 20,
@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(width: 10),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 Text(
                   'Welcome',
                   style: TextStyle(

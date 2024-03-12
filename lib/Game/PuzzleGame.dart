@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PuzzleGame extends StatefulWidget {
+  const PuzzleGame({super.key});
+
   @override
   _PuzzleGameState createState() => _PuzzleGameState();
 }
@@ -25,11 +27,11 @@ class _PuzzleGameState extends State<PuzzleGame> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Simple Puzzle Game'),
+        title: const Text('Simple Puzzle Game'),
       ),
       body: GridView.builder(
-        padding: EdgeInsets.all(10),
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        padding: const EdgeInsets.all(10),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,
           mainAxisSpacing: 5,
           crossAxisSpacing: 5,
@@ -46,7 +48,7 @@ class _PuzzleGameState extends State<PuzzleGame> {
               child: Center(
                 child: Text(
                   puzzle[index].toString(),
-                  style: TextStyle(fontSize: 30),
+                  style: const TextStyle(fontSize: 30),
                 ),
               ),
             ),

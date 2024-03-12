@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
 import 'package:nvld_app/Game/PuzzleGame.dart';
 import 'package:nvld_app/Game/TicTac.dart';
 
@@ -14,7 +12,7 @@ class PuzzelPlanetHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: primaryColor,
         ),
         title: Text(
@@ -34,7 +32,7 @@ class PuzzelPlanetHome extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => PuzzleGame(),
+                  builder: (context) => const PuzzleGame(),
                 ),
               );
             },
@@ -43,13 +41,13 @@ class PuzzelPlanetHome extends StatelessWidget {
               child: Image.asset('assets/images/solvepuzzle.png'),
             ),
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => TicTacGame(),
+                  builder: (context) => const TicTacGame(),
                 ),
               );
             },
@@ -58,13 +56,13 @@ class PuzzelPlanetHome extends StatelessWidget {
               child: Image.asset('assets/images/tictac.png'),
             ),
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => PuzzleGame(),
+                  builder: (context) => const PuzzleGame(),
                 ),
               );
             },

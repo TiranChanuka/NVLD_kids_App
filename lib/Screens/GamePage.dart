@@ -14,7 +14,7 @@ class Games extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: whitecolor,
-        title: Row(
+        title: const Row(
           children: [
             CircleAvatar(
               radius: 20,
@@ -23,7 +23,7 @@ class Games extends StatelessWidget {
             SizedBox(width: 10),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 Text(
                   'Welcome',
                   style: TextStyle(
@@ -45,9 +45,9 @@ class Games extends StatelessWidget {
             padding: const EdgeInsets.all(0),
             child: Lottie.asset('assets/animations/ani5.json'),
           ),
-          SizedBox(height: 10),
-          Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20),
+          const SizedBox(height: 10),
+          const Padding(
+            padding: EdgeInsets.only(left: 20, right: 20),
             child: Text(
               'Games is a game that helps children with NVLD to improve their social skills.',
               textAlign: TextAlign.start,
@@ -58,9 +58,9 @@ class Games extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20),
-          Padding(
-            padding: const EdgeInsets.only(left: 10, right: 10),
+          const SizedBox(height: 20),
+          const Padding(
+            padding: EdgeInsets.only(left: 10, right: 10),
             child: Text(
               'Select Catagory',
               textAlign: TextAlign.center,
@@ -70,13 +70,13 @@ class Games extends StatelessWidget {
                   fontWeight: FontWeight.bold),
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SmileCapture(), // Replace with your desired screen
+                  builder: (context) => const SmileCapture(), // Replace with your desired screen
                 ),
               );
             },
@@ -85,13 +85,13 @@ class Games extends StatelessWidget {
               child: Image.asset('assets/images/buildingblock.png'),
             ),
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SmileCapture(), // Replace with your desired screen
+                  builder: (context) => const SmileCapture(), // Replace with your desired screen
                 ),
               );
             },
@@ -100,13 +100,13 @@ class Games extends StatelessWidget {
               child: Image.asset('assets/images/drag.png'),
             ),
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SmileCapture(), // Replace with your desired screen
+                  builder: (context) => const SmileCapture(), // Replace with your desired screen
                 ),
               );
             },

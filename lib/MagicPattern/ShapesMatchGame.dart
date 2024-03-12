@@ -6,7 +6,7 @@ class ShapeWidget extends StatelessWidget {
   final Function onDragStarted;
   final Function onDragEnded;
 
-  const ShapeWidget({
+  const ShapeWidget({super.key, 
     required this.color,
     required this.isDragging,
     required this.onDragStarted,
@@ -21,7 +21,7 @@ class ShapeWidget extends StatelessWidget {
       onDragEnd: (details) => onDragEnded(),
       feedback: Container(
         color: color,
-        child: Center(
+        child: const Center(
           child: Text(
             'Shape',
             style: TextStyle(color: Colors.white),
@@ -30,7 +30,7 @@ class ShapeWidget extends StatelessWidget {
       ),
       child: Container(
         color: color,
-        child: Center(
+        child: const Center(
           child: Text(
             'Shape',
             style: TextStyle(color: Colors.white),
@@ -45,7 +45,7 @@ class ShadedArea extends StatelessWidget {
   final Color targetColor;
   final Function onAccept;
 
-  const ShadedArea({
+  const ShadedArea({super.key, 
     required this.targetColor,
     required this.onAccept,
   });
@@ -58,7 +58,7 @@ class ShadedArea extends StatelessWidget {
       builder: (context, candidateData, rejectedData) {
         return Container(
           color: Colors.grey,
-          child: Center(
+          child: const Center(
             child: Text(
               'Drop here',
               style: TextStyle(color: Colors.white),
@@ -71,6 +71,8 @@ class ShadedArea extends StatelessWidget {
 }
 
 class ShapesMatchGameScreen extends StatefulWidget {
+  const ShapesMatchGameScreen({super.key});
+
   @override
   _GameScreenState createState() => _GameScreenState();
 }
@@ -107,7 +109,7 @@ class _GameScreenState extends State<ShapesMatchGameScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Shapes Matching Game'),
+        title: const Text('Shapes Matching Game'),
       ),
       body: Column(
         children: [

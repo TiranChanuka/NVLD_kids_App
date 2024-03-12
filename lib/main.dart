@@ -4,8 +4,6 @@ import 'package:nvld_app/BubblePopBliss/BubblePopBliss.dart';
 import 'package:nvld_app/DoodleDash/DoodleDashHome.dart';
 import 'package:nvld_app/FeelingExplore/FeelingExplorerHome.dart';
 import 'package:nvld_app/MyDayMyWay/MyDayMyWay.dart';
-import 'package:nvld_app/NaviationBar.dart';
-import './Screens/Homepage.dart';
 
 import 'package:device_preview/device_preview.dart';
 
@@ -16,12 +14,12 @@ import 'SplashScreen/splashScreenOne.dart';
 void main() => runApp(
       DevicePreview(
         enabled: !kReleaseMode,
-        builder: (context) => MyApp(), // Wrap your app
+        builder: (context) => const MyApp(), // Wrap your app
       ),
     );
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,14 +28,14 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
-      home: SplashScreenOne(),
+      home: const SplashScreenOne(),
       routes: {
-        '/feeling_explore': (context) => FeelingExplorer(),
-        '/magic_pattern':(context) => MagicPatternHome(),
-        '/puzzel_planet':(context) => PuzzelPlanetHome(),
-        '/doodle_dash': (context) => DoodleDashHome(),
-        '/bubble_pop_bliss':(context) => BubblePopBliss(),
-        '/myday_myway':(context) => MyDayMyWay()
+        '/feeling_explore': (context) => const FeelingExplorer(),
+        '/magic_pattern':(context) => const MagicPatternHome(),
+        '/puzzel_planet':(context) => const PuzzelPlanetHome(),
+        '/doodle_dash': (context) => const DoodleDashHome(),
+        '/bubble_pop_bliss':(context) => const BubblePopBliss(),
+        '/myday_myway':(context) => const MyDayMyWay()
       },
     );
   }

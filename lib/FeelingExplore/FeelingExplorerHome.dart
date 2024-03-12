@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
 import 'package:nvld_app/FeelingExplore/AngryCapture.dart';
 import '../color.dart';
 import 'SadCapture.dart';
@@ -13,7 +12,7 @@ class FeelingExplorer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: primaryColor,
         ),
         title: Text(
@@ -55,7 +54,7 @@ class FeelingExplorer extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           GestureDetector(
@@ -63,7 +62,7 @@ class FeelingExplorer extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SmileCapture(), // Replace with your desired screen
+                  builder: (context) => const SmileCapture(), // Replace with your desired screen
                 ),
               );
             },
@@ -73,13 +72,13 @@ class FeelingExplorer extends StatelessWidget {
             ),
           ),
 
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SadCapture(), // Replace with your desired screen
+                  builder: (context) => const SadCapture(), // Replace with your desired screen
                 ),
               );
             },
@@ -88,13 +87,13 @@ class FeelingExplorer extends StatelessWidget {
               child: Image.asset('assets/images/sad.png'),
             ),
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           GestureDetector(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => AngryCapture(), // Replace with your desired screen
+                  builder: (context) => const AngryCapture(), // Replace with your desired screen
                 ),
               );
             },
@@ -103,7 +102,7 @@ class FeelingExplorer extends StatelessWidget {
               child: Image.asset('assets/images/angry.png'),
             ),
           ),
-          SizedBox(height: 20,)
+          const SizedBox(height: 20,)
         ],
       ),
     );
