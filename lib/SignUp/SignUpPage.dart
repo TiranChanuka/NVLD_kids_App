@@ -18,6 +18,7 @@ class _SignUpState extends State<SignUp> {
     return Scaffold(
       body: ListView(
         children: [
+          SizedBox(height: 30,),
           Padding(
             padding: const EdgeInsets.only(right: 20, left: 20),
             child: Text(
