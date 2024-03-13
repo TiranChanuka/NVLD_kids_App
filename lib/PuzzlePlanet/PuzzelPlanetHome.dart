@@ -26,7 +26,30 @@ class PuzzelPlanetHome extends StatelessWidget {
       ),
       body: ListView(
         children: [
-
+          Padding(
+            padding: const EdgeInsets.only(left: 20, right: 20),
+            child: Text(
+              'In the silence of expression, emotions speak louder than words',
+              style: GoogleFonts.sourceSans3(
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+                color: primaryColor,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
+            child: Text(
+              'Select Game',
+              textAlign: TextAlign.center,
+              style: GoogleFonts.sourceSans3(
+                fontSize: 24,
+                fontWeight: FontWeight.w700,
+                color: tertiaryColor,
+              ),
+            ),
+          ),
+          SizedBox(height: 30,),
           GestureDetector(
             onTap: () {
               Navigator.push(
