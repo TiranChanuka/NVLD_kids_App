@@ -6,6 +6,7 @@ import '../color.dart';
 class Profile extends StatelessWidget {
   const Profile({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -129,13 +130,13 @@ class Profile extends StatelessWidget {
                     children: [
                       Expanded(
                           child: Text(
-                        'Name:',
+                        'Age:',
                         style: Theme.of(context).textTheme.bodyMedium,
                         overflow: TextOverflow.ellipsis,
                       )),
                       Expanded(
                           child: Text(
-                        'Jhone Doe',
+                        '6',
                         style: Theme.of(context).textTheme.bodySmall,
                         overflow: TextOverflow.ellipsis,
                       )),
@@ -150,13 +151,13 @@ class Profile extends StatelessWidget {
                     children: [
                       Expanded(
                           child: Text(
-                        'Name:',
+                        'DOB:',
                         style: Theme.of(context).textTheme.bodyMedium,
                         overflow: TextOverflow.ellipsis,
                       )),
                       Expanded(
                           child: Text(
-                        'Jhone Doe',
+                        '2000-10-03',
                         style: Theme.of(context).textTheme.bodySmall,
                         overflow: TextOverflow.ellipsis,
                       )),
@@ -171,13 +172,13 @@ class Profile extends StatelessWidget {
                     children: [
                       Expanded(
                           child: Text(
-                        'Name:',
+                        'Gender',
                         style: Theme.of(context).textTheme.bodyMedium,
                         overflow: TextOverflow.ellipsis,
                       )),
                       Expanded(
                           child: Text(
-                        'Jhone Doe',
+                        'Male',
                         style: Theme.of(context).textTheme.bodySmall,
                         overflow: TextOverflow.ellipsis,
                       )),
