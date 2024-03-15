@@ -49,7 +49,7 @@ class Games extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.only(left: 20, right: 20),
             child: Text(
-              'Games is a game that helps children with NVLD to improve their social skills.',
+              'Games is a game that helps children to improve their social skills.',
               textAlign: TextAlign.start,
               style: TextStyle(
                 fontSize: 18,

@@ -95,6 +95,28 @@ class _SignInState extends State<SignIn> {
     return Scaffold(
       body: ListView(
         children: [
+<<<<<<< HEAD
+=======
+          SizedBox(height: 30,),
+          // ClipPath(
+          //   clipper: MyClipperSignin(),
+          //   child: Container(
+          //     padding: const EdgeInsets.symmetric(horizontal: 10),
+          //     height: MediaQuery.of(context).size.height / 4,
+          //     width: double.infinity,
+          //     decoration: const BoxDecoration(
+          //       gradient: LinearGradient(
+          //         begin: Alignment.topRight,
+          //         end: Alignment.bottomLeft,
+          //         colors: [
+          //           Color(0xFF3383CD),
+          //           Color(0xFF11249F),
+          //         ],
+          //       ),
+          //     ),
+          //   ),
+          // ),
+>>>>>>> 1a8d22c00f4218a358bb6de57132c098e1565469
           Padding(
             padding: const EdgeInsets.only(right: 20, left: 20),
             child: Text(

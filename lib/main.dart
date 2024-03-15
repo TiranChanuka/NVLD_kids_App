@@ -1,12 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nvld_app/BubblePopBliss/BubblePopBliss.dart';
 import 'package:nvld_app/DoodleDash/DoodleDashHome.dart';
 import 'package:nvld_app/FeelingExplore/FeelingExplorerHome.dart';
 import 'package:nvld_app/MyDayMyWay/MyDayMyWay.dart';
-
 import 'package:device_preview/device_preview.dart';
-
 import 'MagicPattern/MagicPatternHome.dart';
 import 'PuzzlePlanet/PuzzelPlanetHome.dart';
 import 'SplashScreen/splashScreenOne.dart';
