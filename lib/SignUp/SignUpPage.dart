@@ -20,7 +20,7 @@ class _SignUpState extends State<SignUp> {
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _confirmPasswordController =
   TextEditingController();
-  final String backendUrl = 'http://localhost:3000/user/register'; // Replace with your backend URL
+  final String backendUrl = 'https://nonverbal-learning-disability-app-backend.onrender.com/user/register'; // Replace with your backend URL
 
   Future<void> _signUp() async {
     final String name = _nameController.text.trim();
