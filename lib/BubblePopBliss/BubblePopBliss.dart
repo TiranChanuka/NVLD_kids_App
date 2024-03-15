@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import './Otherpages/MusicPage.dart';
 import '../color.dart';
+import 'Otherpages/musicPlayer.dart';
 
 class BubblePopBliss extends StatelessWidget {
   const BubblePopBliss({super.key});
@@ -45,7 +46,7 @@ class BubblePopBliss extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => MusicPlayerScreen()));
+                            builder: (context) => MusicHomeScreen()));
                   },
                   child: Row(
                     children: [
