@@ -1,42 +1,100 @@
+import 'dart:convert';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:nvld_app/NaviationBar.dart';
 import 'package:nvld_app/SignUp/SignUpPage.dart';
-
 import '../color.dart';
 
 class SignIn extends StatefulWidget {
-  const SignIn({super.key});
+  const SignIn({Key? key}) : super(key: key);
+
   @override
   State<SignIn> createState() => _SignInState();
 }
 
 class _SignInState extends State<SignIn> {
   bool _isPasswordVisible = true;
+  final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  // http://10.0.2.2:8000
+  final String backendUrl = 'http://10.0.2.2:3000/user/login'; // Replace with your backend URL
+
+  Future<void> _signIn() async {
+    final String username = _usernameController.text.trim();
+    final String password = _passwordController.text.trim();
+
+    if (username.isEmpty || password.isEmpty) {
+      // Show an error message if username or password is empty
+      return showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('Error'),
+            content: Text('Please enter both username and password.'),
+            actions: <Widget>[
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: Text('OK'),
+              ),
+            ],
+          );
+        },
+      );
+    }
+
+    try {
+      print(username);
+      print(password);
+      final dio = Dio();
+      // final response = await dio.get(backendUrl);
+      final response = await dio.post(backendUrl, data: {'email': username, 'password': password});
+      print(response);
+
+      if (response.statusCode == 200) {
+        // Successful sign-in, navigate to the home screen or any other destination
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => NavigationBarBottom()),
+        );
+      } else {
+        // Show an error message if sign-in fails
+        _showErrorDialog('Sign-in failed. Please check your credentials.');
+      }
+    } catch (e) {
+      print('Error: $e');
+      _showErrorDialog('Failed to connect to the server.');
+    }
+  }
+
+  void _showErrorDialog(String message) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Error'),
+          content: Text(message),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text('OK'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
         children: [
-          // ClipPath(
-          //   clipper: MyClipperSignin(),
-          //   child: Container(
-          //     padding: const EdgeInsets.symmetric(horizontal: 10),
-          //     height: MediaQuery.of(context).size.height / 4,
-          //     width: double.infinity,
-          //     decoration: const BoxDecoration(
-          //       gradient: LinearGradient(
-          //         begin: Alignment.topRight,
-          //         end: Alignment.bottomLeft,
-          //         colors: [
-          //           Color(0xFF3383CD),
-          //           Color(0xFF11249F),
-          //         ],
-          //       ),
-          //     ),
-          //   ),
-          // ),
           Padding(
             padding: const EdgeInsets.only(right: 20, left: 20),
             child: Text(
@@ -48,59 +106,42 @@ class _SignInState extends State<SignIn> {
               ),
             ),
           ),
-          SizedBox(
-            height: 40,
-          ),
+          SizedBox(height: 40),
           Padding(
             padding: const EdgeInsets.only(right: 20, left: 20),
             child: Lottie.asset('assets/animations/sign.json'),
           ),
-          SizedBox(
-            height: 20,
-          ),
+          SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.only(right: 20, left: 20),
             child: TextField(
+              controller: _usernameController,
               decoration: InputDecoration(
                 hintText: 'Username',
-                prefixIcon: Icon(Icons.person_outline_sharp,color: primaryColor,),
+                prefixIcon: Icon(Icons.person_outline_sharp, color: primaryColor),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(
-                      color: primaryColor,
-                      width: 2.0), // Red border for all states
+                  borderSide: BorderSide(color: primaryColor, width: 2.0),
                 ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(
-                      10), // Match the radius for consistency
-                  borderSide: BorderSide(
-                      color: primaryColor,
-                      width: 2.0), // Ensure red in enabled state
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(
-                      10), // Match the radius for consistency
-                  borderSide: BorderSide(
-                      color: primaryColor,
-                      width: 2.0), // Ensure red in focused state
-                ),
+                // Remaining input decoration properties...
               ),
             ),
           ),
-
-          SizedBox(height: 20), // Adjust spacing as needed
+          SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.only(right: 20, left: 20),
             child: TextField(
-              obscureText: _isPasswordVisible, // Initially hide password
+              controller: _passwordController,
+              obscureText: _isPasswordVisible,
               decoration: InputDecoration(
                 hintText: 'Password',
-                prefixIcon: Icon(Icons.lock_outline,color: primaryColor,),
+                prefixIcon: Icon(Icons.lock_outline, color: primaryColor),
                 suffixIcon: IconButton(
                   icon: Icon(
                     _isPasswordVisible
                         ? Icons.visibility_outlined
-                        : Icons.visibility_off_outlined,color: primaryColor,
+                        : Icons.visibility_off_outlined,
+                    color: primaryColor,
                   ),
                   onPressed: () {
                     setState(() {
@@ -112,38 +153,23 @@ class _SignInState extends State<SignIn> {
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide(color: primaryColor, width: 2.0),
                 ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: primaryColor, width: 2.0),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(color: primaryColor, width: 2.0),
-                ),
+                // Remaining input decoration properties...
               ),
             ),
           ),
-
           SizedBox(height: 20),
-          // Login button (replace placeholders with your styling and functionality)
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const NavigationBarBottom()),
-                );
-              },
+              onPressed: _signIn,
               style: ElevatedButton.styleFrom(
                 backgroundColor: primaryColor,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
               ),
-              child: const Text(
+              child: Text(
                 'Sign in',
                 style: TextStyle(
                   fontSize: 18,
@@ -153,8 +179,6 @@ class _SignInState extends State<SignIn> {
               ),
             ),
           ),
-
-          // Forget password option (replace placeholders with your functionality)
           TextButton(
             onPressed: () {}, // Define forget password action here
             child: Text(
@@ -176,14 +200,13 @@ class _SignInState extends State<SignIn> {
               ),
             ),
           ),
-
           TextButton(
             onPressed: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => const SignUp()),
               );
-            }, // Define forget password action here
+            },
             child: Text(
               'Sign up',
               style: GoogleFonts.sourceSans3(
@@ -196,23 +219,5 @@ class _SignInState extends State<SignIn> {
         ],
       ),
     );
-  }
-}
-
-class MyClipperSignin extends CustomClipper<Path> {
-  @override
-  Path getClip(Size size) {
-    var path = Path();
-    path.lineTo(0, size.height - 80);
-    path.quadraticBezierTo(
-        size.width / 2, size.height, size.width, size.height - 80);
-    path.lineTo(size.width, 0);
-    path.close();
-    return path;
-  }
-
-  @override
-  bool shouldReclip(CustomClipper<Path> oldClipper) {
-    return false;
   }
 }
