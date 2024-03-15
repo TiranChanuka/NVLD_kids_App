@@ -27,8 +27,8 @@ class _NavigationBarBottomState extends State<NavigationBarBottom> {
   @override
   Widget build(BuildContext context) {
     List<Widget> pages = [
-      HomeScreen(),
-      Games(),
+      HomeScreen(name: widget.name),
+      Games(name: widget.name),
       Profile(email: widget.email, name: widget.name, id: widget.id),
       StatShow(),
     ];

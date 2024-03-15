@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../color.dart';
+import '../color.dart'; // assuming you have defined your colors in color.dart
 import 'package:google_fonts/google_fonts.dart';
 
 class CardModel {
@@ -12,7 +12,9 @@ class CardModel {
 }
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  final String name;
+
+  const HomeScreen({Key? key, required this.name}) : super(key: key);
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -49,11 +51,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: whitecolor,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: whitecolor,
-        title: const Row(
+        backgroundColor: Colors.white,
+        title: Row(
           children: [
             CircleAvatar(
               radius: 20,
@@ -70,9 +72,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.black,
                       fontWeight: FontWeight.bold),
                 ),
-                Text('User Name',
-                    style:
-                        TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
+                Text(
+                  widget.name,
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                ),
               ],
             ),
           ],
@@ -80,7 +83,6 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: [
-          // Title section
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Text(
@@ -88,12 +90,11 @@ class _HomeScreenState extends State<HomeScreen> {
               style: GoogleFonts.sourceSans3(
                 fontSize: 25,
                 fontWeight: FontWeight.w700,
-                color: primaryColor,
+                color: Colors.black, // change primaryColor to Colors.black or any other color you desire
               ),
             ),
           ),
 
-          // GridView section
           Expanded(
             child: GridView.count(
               crossAxisCount: 2,
@@ -111,7 +112,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           children: [
                             Expanded(
                               child: Image.asset(
-                                // Access card.imagePath within the card's widget tree
                                 card.imagePath,
                                 fit: BoxFit.cover,
                               ),
@@ -119,12 +119,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             Padding(
                               padding: const EdgeInsets.all(1.0),
                               child: Text(
-                                // Access card.title within the card's widget tree
                                 card.title,
                                 style: GoogleFonts.sourceSans3(
                                   fontSize: 20,
                                   fontWeight: FontWeight.w500,
-                                  color: quaternaryColor,
+                                  color: Colors.black, // change quaternaryColor to Colors.black or any other color you desire
                                 ),
                               ),
                             ),

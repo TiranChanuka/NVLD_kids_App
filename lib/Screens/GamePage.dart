@@ -5,16 +5,18 @@ import 'package:nvld_app/color.dart';
 import '../FeelingExplore/SmileCapture.dart';
 
 class Games extends StatelessWidget {
-  const Games({super.key});
+  final String name; // Add name argument here
+
+  const Games({Key? key, required this.name}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: whitecolor,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: whitecolor,
-        title: const Row(
+        backgroundColor: Colors.white,
+        title: Row(
           children: [
             CircleAvatar(
               radius: 20,
@@ -31,9 +33,10 @@ class Games extends StatelessWidget {
                       color: Colors.black,
                       fontWeight: FontWeight.bold),
                 ),
-                Text('User Name',
-                    style:
-                    TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
+                Text(
+                  name, // Use the provided name
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                ),
               ],
             ),
           ],
@@ -62,7 +65,7 @@ class Games extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.only(left: 10, right: 10),
             child: Text(
-              'Select Catagory',
+              'Select Category',
               textAlign: TextAlign.center,
               style: TextStyle(
                   fontSize: 24,
