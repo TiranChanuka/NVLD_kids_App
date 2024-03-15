@@ -65,25 +65,21 @@ class DoodleDashHome extends StatelessWidget {
                   fontWeight: FontWeight.bold),
             ),
           ),
-          ElevatedButton(
-            onPressed: () {
+          SizedBox(height: 10,),
+          GestureDetector(
+            onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => DrawingBoard()),
+                MaterialPageRoute(
+                  builder: (context) => DrawingBoard(),
+                ),
               );
-              print('Button pressed!');
             },
-            style: ElevatedButton.styleFrom(
-              foregroundColor: Colors.white,
-              backgroundColor: Colors.blue, // Text color
-              elevation: 5, // Shadow elevation
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15), // Corner rounding
-              ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Image.asset('assets/images/drawin.png'),
             ),
-            child: const Text('Drawing board'),
-          )
+          ),
         ],
       ),
     );

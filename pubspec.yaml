@@ -70,36 +70,10 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/magic.jpg
-    - assets/images/bubble.jpg
-    - assets/images/buildingblock.jpg
-    - assets/images/dailyrout.jpg
-    - assets/images/smile.jpg
-    - assets/images/happy.jpg
-    - assets/images/sad.png
-    - assets/images/drag.png
-    - assets/images/mindrelax.png
-    - assets/images/solvepuzzle.png
-    - assets/images/buildingblock.png
-    - assets/images/tictac.png
-    - assets/images/smile.png
-    - assets/images/angry.png
-    - assets/animations/kidsworking.json
-    - assets/animations/kidsworking2.json
-    - assets/animations/ball.json
-    - assets/animations/play.json
-    - assets/animations/ani1.json
-    - assets/animations/ani2.json
-    - assets/animations/ani3.json
-    - assets/animations/ani4.json
-    - assets/animations/ani5.json
-    - assets/animations/signup.json
-    - assets/animations/sign.json
-    - assets/animations/block.json
-    - assets/animations/puzzle.json
-    - assets/svg/smile.svg
-    - assets/svg/sad.svg
-    - assets/svg/angry.svg
+    - assets/images/
+    - assets/animations/
+    - assets/svg/
+    - assets/musics/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
