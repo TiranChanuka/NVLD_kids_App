@@ -37,6 +37,7 @@ dependencies:
   get: ^4.6.6
   font_awesome_flutter: ^10.6.0
   flutter_svg: ^2.0.9
+  dio: ^4.0.0
   table_calendar: ^3.0.8
   audioplayers: ^5.2.1
   flutter_sound: ^9.2.13

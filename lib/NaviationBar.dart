@@ -6,21 +6,33 @@ import './Screens/ProfilePage.dart';
 import './Screens/StatPage.dart';
 
 class NavigationBarBottom extends StatefulWidget {
-  const NavigationBarBottom({super.key});
+  final String email;
+  final String name;
+  final String id;
+
+  const NavigationBarBottom({
+    Key? key,
+    required this.email,
+    required this.name,
+    required this.id,
+  }) : super(key: key);
+
   @override
   State<NavigationBarBottom> createState() => _NavigationBarBottomState();
 }
 
 class _NavigationBarBottomState extends State<NavigationBarBottom> {
   int currentIndex = 0;
-  List Pages = const [
-    HomeScreen(),
-    Games(),
-    Profile(),
-    StatShow(),
-  ];
+
   @override
   Widget build(BuildContext context) {
+    List<Widget> pages = [
+      HomeScreen(name: widget.name),
+      Games(name: widget.name),
+      Profile(email: widget.email, name: widget.name, id: widget.id),
+      StatShow(),
+    ];
+
     return Scaffold(
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
@@ -63,7 +75,7 @@ class _NavigationBarBottomState extends State<NavigationBarBottom> {
           ],
         ),
       ),
-      body: Pages[currentIndex],
+      body: pages[currentIndex],
     );
   }
 }
