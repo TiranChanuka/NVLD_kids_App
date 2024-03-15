@@ -4,6 +4,7 @@ import 'package:lottie/lottie.dart';
 
 import '../color.dart';
 import 'drawing.dart';
+import 'drawingCatagory.dart';
 
 class DoodleDashHome extends StatelessWidget {
   const DoodleDashHome({super.key});
@@ -43,7 +44,7 @@ class DoodleDashHome extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 20),
             child: Text(
-              'Activities that involve precise hand movements, like drawing, tracing, or drag-and-drop tasks, can help improve fine motor skills.',
+              'Drawing, tracing, or drag-and-drop tasks',
               style: GoogleFonts.sourceSans3(
                 fontSize: 20,
                 fontWeight: FontWeight.w500,
@@ -71,7 +72,7 @@ class DoodleDashHome extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => DrawingBoard(),
+                  builder: (context) => Drawingcatagory(),
                 ),
               );
             },
@@ -80,6 +81,22 @@ class DoodleDashHome extends StatelessWidget {
               child: Image.asset('assets/images/drawin.png'),
             ),
           ),
+          SizedBox(height: 20,),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DrawingBoard(),
+                ),
+              );
+            },
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Image.asset('assets/images/drag.png'),
+            ),
+          ),
+          SizedBox(height: 20,),
         ],
       ),
     );

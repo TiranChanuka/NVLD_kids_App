@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nvld_app/color.dart';
 
-class DrawingBoard extends StatefulWidget {
+class DrawingBoardTriangle extends StatefulWidget {
   @override
   _DrawingBoardState createState() => _DrawingBoardState();
 }
 
-class _DrawingBoardState extends State<DrawingBoard> {
+class _DrawingBoardState extends State<DrawingBoardTriangle> {
   Color selectedColor = Colors.black;
   double strokeWidth = 5;
   List<DrawingPoint> drawingPoints = [];
@@ -17,7 +17,7 @@ class _DrawingBoardState extends State<DrawingBoard> {
     primaryColor,
     Colors.red,
     Colors.black,
-    Colors.yellow,
+    tertiaryColor,
     Colors.amberAccent,
     Colors.purple,
     Colors.green,
@@ -33,7 +33,7 @@ class _DrawingBoardState extends State<DrawingBoard> {
           Padding(padding: EdgeInsets.only(left: 20),
           child: Row(
             children: [
-              Text('Draw a red color box',style: GoogleFonts.sourceSans3(
+              Text('Draw a Orange color triangle',style: GoogleFonts.sourceSans3(
                 fontSize: 25,
                 color: textColor,
                 fontWeight: FontWeight.w500,

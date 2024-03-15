@@ -43,6 +43,7 @@ dependencies:
   flutter_sound: ^9.2.13
   flutter_colorpicker: ^0.4.0
   flutter_signature_pad: ^3.0.0
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -71,6 +72,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/images/camera.png
     - assets/animations/
     - assets/svg/
     - assets/musics/

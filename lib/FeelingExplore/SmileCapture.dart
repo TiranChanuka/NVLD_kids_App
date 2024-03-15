@@ -40,10 +40,17 @@ class SmileCapture extends StatelessWidget {
             padding: const EdgeInsets.all(10.0),
             child: Row(
               children: [
-                Text('Try smile to camera')
+                Text('Try smile to camera',
+                style: GoogleFonts.sourceSans3(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                  color: textColor,
+                ),
+                ),
               ],
             ),
-          )
+          ),
+          const SizedBox(height: 20,),
         ],
       ),
     );

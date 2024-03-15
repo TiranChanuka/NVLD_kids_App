@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nvld_app/color.dart';
 
-class DrawingBoard extends StatefulWidget {
+class DrawingBoardCircle extends StatefulWidget {
   @override
   _DrawingBoardState createState() => _DrawingBoardState();
 }
 
-class _DrawingBoardState extends State<DrawingBoard> {
+class _DrawingBoardState extends State<DrawingBoardCircle> {
   Color selectedColor = Colors.black;
   double strokeWidth = 5;
   List<DrawingPoint> drawingPoints = [];
@@ -20,7 +20,7 @@ class _DrawingBoardState extends State<DrawingBoard> {
     Colors.yellow,
     Colors.amberAccent,
     Colors.purple,
-    Colors.green,
+    quaternaryColor,
   ];
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class _DrawingBoardState extends State<DrawingBoard> {
           Padding(padding: EdgeInsets.only(left: 20),
           child: Row(
             children: [
-              Text('Draw a red color box',style: GoogleFonts.sourceSans3(
+              Text('Draw a green color Circle',style: GoogleFonts.sourceSans3(
                 fontSize: 25,
                 color: textColor,
                 fontWeight: FontWeight.w500,
