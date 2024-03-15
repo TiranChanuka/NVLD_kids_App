@@ -1,6 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:nvld_app/color.dart';
 
 class DrawingBoard extends StatefulWidget {
   @override
@@ -12,7 +14,7 @@ class _DrawingBoardState extends State<DrawingBoard> {
   double strokeWidth = 5;
   List<DrawingPoint> drawingPoints = [];
   List<Color> colors = [
-    Colors.pink,
+    primaryColor,
     Colors.red,
     Colors.black,
     Colors.yellow,
@@ -24,10 +26,23 @@ class _DrawingBoardState extends State<DrawingBoard> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Drawing Board'),
+        title: Text('Drawing Board',),
       ),
       body: Stack(
         children: [
+          Padding(padding: EdgeInsets.only(left: 20),
+          child: Row(
+            children: [
+              Text('Draw a red color box',style: GoogleFonts.sourceSans3(
+                fontSize: 25,
+                color: textColor,
+                fontWeight: FontWeight.w500,
+              ),
+              ),
+            ],
+          ),
+          ),
+          SizedBox(height: 20,),
           GestureDetector(
             onPanStart: (details) {
               setState(() {
