@@ -19,7 +19,7 @@ class _SignInState extends State<SignIn> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   // http://10.0.2.2:8000
-  final String backendUrl = 'http://10.0.2.2:3000/user/login'; // Replace with your backend URL
+  final String backendUrl = 'http://localhost:3000/user/login'; // Replace with your backend URL
 
   Future<void> _signIn() async {
     final String username = _usernameController.text.trim();
@@ -47,18 +47,41 @@ class _SignInState extends State<SignIn> {
     }
 
     try {
-      print(username);
-      print(password);
+     // print(username);
+      //print(password);
       final dio = Dio();
       // final response = await dio.get(backendUrl);
       final response = await dio.post(backendUrl, data: {'email': username, 'password': password});
-      print(response);
+      // print(response["data"]);
+      // if (response.statusCode == 404){
+      //   print("not found");
+      // }
+      // Extract name from the response and print it
+      // final responseData = jsonDecode(response.data);
+      // final name = responseData['data']['user']['name'];
+      // print('Name: $name');
 
       if (response.statusCode == 200) {
+        // Extract name from the response and print it
+        final responseData = response.data;
+        print(responseData);
+        final user = responseData['data']['user'];
+        print(user);
+        final name = user['name'] as String; // Ensure it's treated as a String
+        final _id = user['_id'] as String;
+        final email = user['email'] as String;
+        print('Name: $name');
+        print(_id);
+
+
         // Successful sign-in, navigate to the home screen or any other destination
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => NavigationBarBottom()),
+          MaterialPageRoute(builder: (context) => NavigationBarBottom(
+            name: name,
+            id: _id,
+            email: email,
+          )),
         );
       } else {
         // Show an error message if sign-in fails
@@ -66,7 +89,7 @@ class _SignInState extends State<SignIn> {
       }
     } catch (e) {
       print('Error: $e');
-      _showErrorDialog('Failed to connect to the server.');
+      _showErrorDialog('User Name or Password Incorrect.');
     }
   }
 
@@ -95,28 +118,6 @@ class _SignInState extends State<SignIn> {
     return Scaffold(
       body: ListView(
         children: [
-<<<<<<< HEAD
-=======
-          SizedBox(height: 30,),
-          // ClipPath(
-          //   clipper: MyClipperSignin(),
-          //   child: Container(
-          //     padding: const EdgeInsets.symmetric(horizontal: 10),
-          //     height: MediaQuery.of(context).size.height / 4,
-          //     width: double.infinity,
-          //     decoration: const BoxDecoration(
-          //       gradient: LinearGradient(
-          //         begin: Alignment.topRight,
-          //         end: Alignment.bottomLeft,
-          //         colors: [
-          //           Color(0xFF3383CD),
-          //           Color(0xFF11249F),
-          //         ],
-          //       ),
-          //     ),
-          //   ),
-          // ),
->>>>>>> 1a8d22c00f4218a358bb6de57132c098e1565469
           Padding(
             padding: const EdgeInsets.only(right: 20, left: 20),
             child: Text(

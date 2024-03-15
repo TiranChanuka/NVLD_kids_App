@@ -4,7 +4,16 @@ import 'package:google_fonts/google_fonts.dart';
 import '../color.dart';
 
 class Profile extends StatelessWidget {
-  const Profile({super.key});
+  final String email;
+  final String name; // Added name argument
+  final String id;
+
+  const Profile({
+    Key? key,
+    required this.email,
+    required this.name,
+    required this.id,
+  }) : super(key: key);
 
 
   @override
@@ -69,7 +78,7 @@ class Profile extends StatelessWidget {
                   ),
                   IconButton(icon: Icon(Icons.edit), onPressed: () {}),
                   Text(
-                    'Name',
+                    '$name',
                     style: GoogleFonts.sourceSans3(
                       fontSize: 20,
                       fontWeight: FontWeight.w700,
@@ -115,7 +124,7 @@ class Profile extends StatelessWidget {
                       )),
                       Expanded(
                           child: Text(
-                        'Jhone Doe',
+                        '$name',
                         style: Theme.of(context).textTheme.bodySmall,
                         overflow: TextOverflow.ellipsis,
                       )),
@@ -130,13 +139,13 @@ class Profile extends StatelessWidget {
                     children: [
                       Expanded(
                           child: Text(
-                        'Age:',
+                        'email:',
                         style: Theme.of(context).textTheme.bodyMedium,
                         overflow: TextOverflow.ellipsis,
                       )),
                       Expanded(
                           child: Text(
-                        '6',
+                        '$email',
                         style: Theme.of(context).textTheme.bodySmall,
                         overflow: TextOverflow.ellipsis,
                       )),
@@ -151,13 +160,13 @@ class Profile extends StatelessWidget {
                     children: [
                       Expanded(
                           child: Text(
-                        'DOB:',
+                        'ID:',
                         style: Theme.of(context).textTheme.bodyMedium,
                         overflow: TextOverflow.ellipsis,
                       )),
                       Expanded(
                           child: Text(
-                        '2000-10-03',
+                        '$id',
                         style: Theme.of(context).textTheme.bodySmall,
                         overflow: TextOverflow.ellipsis,
                       )),

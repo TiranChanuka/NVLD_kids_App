@@ -20,7 +20,7 @@ class _SignUpState extends State<SignUp> {
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _confirmPasswordController =
   TextEditingController();
-  final String backendUrl = 'http://10.0.2.2:3000/user/register'; // Replace with your backend URL
+  final String backendUrl = 'http://localhost:3000/user/register'; // Replace with your backend URL
 
   Future<void> _signUp() async {
     final String name = _nameController.text.trim();
@@ -53,7 +53,7 @@ class _SignUpState extends State<SignUp> {
         // Registration successful, navigate to sign-in page
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => NavigationBarBottom()),
+          MaterialPageRoute(builder: (context) => const SignIn()),
         );
       } else {
         // Show an error message if sign-up fails

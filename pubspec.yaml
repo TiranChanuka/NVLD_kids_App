@@ -37,16 +37,12 @@ dependencies:
   get: ^4.6.6
   font_awesome_flutter: ^10.6.0
   flutter_svg: ^2.0.9
-<<<<<<< HEAD
   dio: ^4.0.0
-
-=======
   table_calendar: ^3.0.8
   audioplayers: ^5.2.1
   flutter_sound: ^9.2.13
   flutter_colorpicker: ^0.4.0
   flutter_signature_pad: ^3.0.0
->>>>>>> 1a8d22c00f4218a358bb6de57132c098e1565469
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
