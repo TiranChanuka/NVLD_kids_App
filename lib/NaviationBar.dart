@@ -68,10 +68,10 @@ class _NavigationBarBottomState extends State<NavigationBarBottom> {
               icon: Icon(Icons.person),
               label: 'Profile',
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.bar_chart),
-              label: 'Stats',
-            ),
+            // BottomNavigationBarItem(
+            //   icon: Icon(Icons.bar_chart),
+            //   label: 'Stats',
+            // ),
           ],
         ),
       ),
