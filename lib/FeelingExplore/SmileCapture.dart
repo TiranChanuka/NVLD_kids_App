@@ -50,7 +50,9 @@ class SmileCapture extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height: 20,),
+          Padding(padding: EdgeInsets.all(20),
+            child: Image.asset('assets/images/camera.png'),
+          ),
         ],
       ),
     );
