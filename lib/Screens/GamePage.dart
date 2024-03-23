@@ -3,6 +3,7 @@ import 'package:lottie/lottie.dart';
 import 'package:nvld_app/color.dart';
 
 import '../FeelingExplore/SmileCapture.dart';
+import '../Game/TicTac.dart';
 
 class Games extends StatelessWidget {
   final String name; // Add name argument here
@@ -18,10 +19,10 @@ class Games extends StatelessWidget {
         backgroundColor: Colors.white,
         title: Row(
           children: [
-            CircleAvatar(
-              radius: 20,
-              backgroundImage: AssetImage('assets/profile_pic.png'),
-            ),
+            // CircleAvatar(
+            //   radius: 20,
+            //   backgroundImage: AssetImage('assets/images/user.png'),
+            // ),
             SizedBox(width: 10),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -79,15 +80,16 @@ class Games extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const SmileCapture(), // Replace with your desired screen
+                  builder: (context) => const TicTacGame(),
                 ),
               );
             },
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Image.asset('assets/images/buildingblock.png'),
+              child: Image.asset('assets/images/tictac.png'),
             ),
           ),
+          const SizedBox(height: 20,),
           const SizedBox(height: 20,),
           GestureDetector(
             onTap: () {
