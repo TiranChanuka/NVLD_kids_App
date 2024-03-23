@@ -198,48 +198,6 @@ class Profile extends StatelessWidget {
                       )
                     ],
                   ),
-                  Row(
-                    children: [
-                      Expanded(
-                          child: Text(
-                        'Name:',
-                        style: Theme.of(context).textTheme.bodyMedium,
-                        overflow: TextOverflow.ellipsis,
-                      )),
-                      Expanded(
-                          child: Text(
-                        'Jhone Doe',
-                        style: Theme.of(context).textTheme.bodySmall,
-                        overflow: TextOverflow.ellipsis,
-                      )),
-                      Expanded(
-                        child: IconButton(
-                            icon: Icon(Icons.arrow_forward_ios_outlined),
-                            onPressed: () {}),
-                      )
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Expanded(
-                          child: Text(
-                        'Name:',
-                        style: Theme.of(context).textTheme.bodyMedium,
-                        overflow: TextOverflow.ellipsis,
-                      )),
-                      Expanded(
-                          child: Text(
-                        'Jhone Doe',
-                        style: Theme.of(context).textTheme.bodySmall,
-                        overflow: TextOverflow.ellipsis,
-                      )),
-                      Expanded(
-                        child: IconButton(
-                            icon: Icon(Icons.arrow_forward_ios_outlined),
-                            onPressed: () {}),
-                      )
-                    ],
-                  ),
                 ],
               ),
             ),
