@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:nvld_app/SignIn/SignInPage.dart';
 import 'package:nvld_app/color.dart';
@@ -55,9 +56,20 @@ class SplashScreenOne extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 80,),
+          Padding(padding: EdgeInsets.all(10),
+            child: Row(
+              children: [
+                Expanded(child: Image.asset('assets/images/logo.png',width: 200,height: 200,)),
+                Expanded(child: Text('We are MindMentors',style: GoogleFonts.sourceSans3(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                  color: primaryColor,
+                ),))
+              ],
+            ),
+          ),
           Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(10.0),
             child: ElevatedButton(
               onPressed: () {
                 Navigator.push(
