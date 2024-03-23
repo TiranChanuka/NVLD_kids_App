@@ -57,10 +57,10 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.white,
         title: Row(
           children: [
-            CircleAvatar(
-              radius: 20,
-              backgroundImage: AssetImage('assets/profile_pic.png'),
-            ),
+            // CircleAvatar(
+            //   radius: 20,
+            //   backgroundImage: AssetImage('assets/images/user.png'),
+            // ),
             SizedBox(width: 10),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
